@@ -52,9 +52,10 @@ public class AdapterMenuPrincipal extends BaseAdapter {
         }
         ObjListaPrincipal obj = lista.get(position);
         ImageView img = (ImageView) v.findViewById(R.id.img_plantilla);
-        img.setImageDrawable(lista.get(position).getImg());
+        img.setImageResource(lista.get(position).getImg());
         TextView opc = (TextView) v.findViewById(R.id.lbl_plantilla);
+        opc.setText(lista.get(position).getOpcion());
 
-        return null;
+        return v;
     }
 }

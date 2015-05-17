@@ -18,6 +18,6 @@ public class Fragment2 extends Fragment {
             LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
 
-        return inflater.inflate(R.layout.activity_fragment1, container, false);
+        return inflater.inflate(R.layout.activity_fragment2, container, false);
     }
 }

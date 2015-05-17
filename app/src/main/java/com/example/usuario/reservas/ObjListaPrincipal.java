@@ -7,12 +7,12 @@ import android.graphics.drawable.Drawable;
  */
 public class ObjListaPrincipal {
     private String opcion;
-    private Drawable img;
+    private int img;
     private long id;
 
-    public ObjListaPrincipal(Drawable img, String opcion) {
-        this.img = img;
+    public ObjListaPrincipal(String opcion, int img) {
         this.opcion = opcion;
+        this.img = img;
     }
 
     public String getOpcion() {
@@ -23,11 +23,11 @@ public class ObjListaPrincipal {
         this.opcion = opcion;
     }
 
-    public Drawable getImg() {
+    public int getImg() {
         return img;
     }
 
-    public void setImg(Drawable img) {
+    public void setImg(int img) {
         this.img = img;
     }
 

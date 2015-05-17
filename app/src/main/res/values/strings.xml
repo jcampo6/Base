@@ -13,11 +13,10 @@
     <string name="title_section2">Administrar Usuarios</string>
     <string name="title_section3">Reportes</string>
 
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
 
     <string name="action_example">Example action</string>
-    <string name="title_activity_principal2">Principal2</string>
     <string name="title_activity_fragment1">Fragment1</string>
     <string name="title_activity_fragment2">Fragment2</string>
     <string name="title_activity_fragment3">Fragment3</string>
