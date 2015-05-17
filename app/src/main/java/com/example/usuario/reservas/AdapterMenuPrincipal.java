@@ -6,6 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -48,6 +50,11 @@ public class AdapterMenuPrincipal extends BaseAdapter {
             LayoutInflater inf = (LayoutInflater) contexto.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             v = inf.inflate(R.layout.plantilla_lista, null);
         }
+        ObjListaPrincipal obj = lista.get(position);
+        ImageView img = (ImageView) v.findViewById(R.id.img_plantilla);
+        img.setImageDrawable(lista.get(position).getImg());
+        TextView opc = (TextView) v.findViewById(R.id.lbl_plantilla);
+
         return null;
     }
 }

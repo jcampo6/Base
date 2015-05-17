@@ -39,7 +39,7 @@ public class Login extends ActionBarActivity {
     }
 
     public void prueba(View v){
-        Intent i = new Intent(Login.this, Principal2.class);
+        Intent i = new Intent(Login.this, Principal.class);
         startActivity(i);
     }
 }

@@ -1,16 +1,18 @@
 package com.example.usuario.reservas;
 
+import android.graphics.drawable.Drawable;
+
 /**
  * Created by USUARIO on 16/05/2015.
  */
 public class ObjListaPrincipal {
     private String opcion;
-    private int img;
+    private Drawable img;
     private long id;
 
-    public ObjListaPrincipal(String opcion, int img) {
-        this.opcion = opcion;
+    public ObjListaPrincipal(Drawable img, String opcion) {
         this.img = img;
+        this.opcion = opcion;
     }
 
     public String getOpcion() {
@@ -21,11 +23,11 @@ public class ObjListaPrincipal {
         this.opcion = opcion;
     }
 
-    public int getImg() {
+    public Drawable getImg() {
         return img;
     }
 
-    public void setImg(int img) {
+    public void setImg(Drawable img) {
         this.img = img;
     }
 

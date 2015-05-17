@@ -7,7 +7,8 @@
     <TextView
         android:id="@+id/TxtDetalle"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:text="Fragment 1">
         </TextView>
 
 
