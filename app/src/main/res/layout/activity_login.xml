@@ -66,7 +66,24 @@
             android:text="@string/iniciarSesion"
             android:id="@+id/btn_iniciar"
             android:layout_gravity="center_horizontal"
-            android:onClick="prueba" />
+            android:onClick="enviar" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="¿No tienes cuenta?"
+            android:id="@+id/lbl_noAcc"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="50dp" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/registro"
+            android:id="@+id/btn_registro"
+            android:layout_gravity="center_horizontal" />
 
     </LinearLayout>
 

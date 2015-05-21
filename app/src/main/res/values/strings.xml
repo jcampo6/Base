@@ -7,6 +7,7 @@
     <string name="usuario">Usuario</string>
     <string name="pasword">Contraseña</string>
     <string name="iniciarSesion">Iniciar Sesion</string>
+    <string name="registro">¡Registrate!</string>
     <string name="title_activity_principal">Principal</string>
 
     <string name="title_section1">Administrar Escenarios</string>

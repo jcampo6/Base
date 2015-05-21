@@ -26,8 +26,9 @@ public class Login extends ActionBarActivity {
     public void enviar(View view){
         StrictMode.enableDefaults();
         EnvioPost env = new EnvioPost();
-        String sql = "INSERT INTO Usuarios VALUES (null,'JORGE','CAMPO',elkb@hotmail.es,'1234567','3604300',false)";
-        String txt = env.post("http://185.27.134.11/app.php", sql);
+        String sql = "INSERT INTO Usuarios (cedula,nombre,apellido,email,password,telefono,nivel_admin)VALUES ('94051713120','JORGE','CAMPO',elkb@hotmail.es,'1234567','3604300',false)";
+        String txt = env.post("http://185.27.134.11/app2.php", sql);
+        Toast.makeText(this, txt,Toast.LENGTH_SHORT).show();
         if(txt.equals("1")){
             Toast msg = Toast.makeText(this, "Datos Guardados!",Toast.LENGTH_SHORT);
             msg.show();
