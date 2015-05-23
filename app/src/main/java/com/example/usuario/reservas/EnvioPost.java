@@ -17,15 +17,33 @@ import java.util.List;
  * Created by USUARIO on 14/05/2015.
  */
 public class EnvioPost {
-    public String post(String url,String sql){
+
+    public String postUsuarios(String sql, String url, String ced, String nom, String ape, String ema, String pw, String tel, String na){
 
         try{
             HttpClient httpclient = new DefaultHttpClient();
 
             HttpPost httppost = new HttpPost(url);
             List<NameValuePair> params = new ArrayList<NameValuePair>();
+            switch (sql){
+                case "0":
+                    params.add(new BasicNameValuePair("sql",sql));
+                    params.add(new BasicNameValuePair("cedula",ced));
+                    params.add(new BasicNameValuePair("nombre",nom));
+                    params.add(new BasicNameValuePair("apellido",ape));
+                    params.add(new BasicNameValuePair("email",ema));
+                    params.add(new BasicNameValuePair("password",pw));
+                    params.add(new BasicNameValuePair("telefono",tel));
+                    params.add(new BasicNameValuePair("nivel_admin",na));
+                    break;
+                case "1":
+                    params.add(new BasicNameValuePair("sql",sql));
+                    params.add(new BasicNameValuePair("email",ema));
+                    params.add(new BasicNameValuePair("password",pw));
+                    break;
+                default:
+            }
 
-            params.add(new BasicNameValuePair("sql",sql));
 
             httppost.setEntity(new UrlEncodedFormEntity(params));
 
