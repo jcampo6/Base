@@ -35,4 +35,8 @@
     <string name="no">No</string>
 
     <string name="error0">Faltan Datos Por Llenar</string>
+    <string name="error1">Las Contraseñas no Coinciden</string>
+    <string name="error2">Se ha Producido un Error al Guardar</string>
+
+    <string name="inf0">Registro Guardado</string>
 </resources>

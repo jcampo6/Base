@@ -95,7 +95,8 @@
                 android:layout_height="wrap_content"
                 android:text="@string/registro"
                 android:id="@+id/btn_registro"
-                android:layout_gravity="center_horizontal" />
+                android:layout_gravity="center_horizontal"
+                android:onClick="registro" />
 
         </LinearLayout>
     </ScrollView>

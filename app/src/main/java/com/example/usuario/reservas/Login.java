@@ -61,8 +61,8 @@ public class Login extends ActionBarActivity {
         }
     }
 
-    public void prueba(View v){
-        Intent i = new Intent(Login.this, Principal.class);
+    public void registro(View v){
+        Intent i = new Intent(Login.this, Registrar_Usuario.class);
         startActivity(i);
     }
 
