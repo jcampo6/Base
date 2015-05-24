@@ -1,5 +1,7 @@
 package com.example.usuario.reservas;
 
+import java.util.Collection;
+
 /**
  * Created by Jhon Campo Mendoza on 21/05/2015.
  */
@@ -13,6 +15,7 @@ public class Usuario {
     private String telefono;
     private String nivel_admin;
 
+
     public Usuario(String id_usuarios, String cedula, String nombre, String apellido, String email, String password, String telefono, String nivel_admin) {
         this.id_usuarios = id_usuarios;
         this.cedula = cedula;
@@ -22,6 +25,9 @@ public class Usuario {
         this.password = password;
         this.telefono = telefono;
         this.nivel_admin = nivel_admin;
+    }
+
+    public Usuario() {
     }
 
     public String getId_usuarios() {
@@ -87,4 +93,5 @@ public class Usuario {
     public void setNivel_admin(String nivel_admin) {
         this.nivel_admin = nivel_admin;
     }
+
 }

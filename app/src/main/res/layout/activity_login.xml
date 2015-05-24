@@ -6,85 +6,98 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.example.usuario.reservas.Login">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
 
-        <ImageView
-            android:layout_width="147dp"
-            android:layout_height="147dp"
-            android:id="@+id/imageView"
-            android:src="@drawable/test"
-            android:layout_gravity="center_horizontal" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/lbl_reserva"
-            android:id="@+id/textView3"
-            android:layout_below="@+id/img_splash"
-            android:layout_centerHorizontal="true"
-            android:textStyle="bold"
-            android:theme="@style/Animation.AppCompat.DropDownUp"
-            android:textColor="#ffff100b"
-            android:layout_gravity="center_horizontal" />
+            <ImageView
+                android:layout_width="147dp"
+                android:layout_height="147dp"
+                android:id="@+id/imageView"
+                android:src="@drawable/test"
+                android:layout_gravity="center_horizontal" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="@string/usuario"
-            android:id="@+id/textView"
-            android:layout_gravity="center_horizontal"
-            android:paddingTop="30dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/lbl_reserva"
+                android:id="@+id/textView3"
+                android:layout_below="@+id/img_splash"
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold"
+                android:theme="@style/Animation.AppCompat.DropDownUp"
+                android:textColor="#ffff100b"
+                android:layout_gravity="center_horizontal" />
 
-        <AutoCompleteTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/txt_usuario"
-            android:layout_gravity="center_horizontal" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/usuario"
+                android:id="@+id/textView"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="30dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="@string/pasword"
-            android:id="@+id/textView2"
-            android:layout_gravity="center_horizontal" />
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_usuario"
+                android:layout_gravity="center_horizontal" />
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/txt_clave"
-            android:layout_gravity="center_horizontal" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/password"
+                android:id="@+id/textView2"
+                android:layout_gravity="center_horizontal" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/iniciarSesion"
-            android:id="@+id/btn_iniciar"
-            android:layout_gravity="center_horizontal"
-            android:onClick="enviar" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_clave"
+                android:layout_gravity="center_horizontal"
+                android:password="true" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="¿No tienes cuenta?"
-            android:id="@+id/lbl_noAcc"
-            android:layout_gravity="center_horizontal"
-            android:paddingTop="50dp" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/iniciarSesion"
+                android:id="@+id/btn_iniciar"
+                android:layout_gravity="center_horizontal"
+                android:onClick="enviar" />
 
-        <Button
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/registro"
-            android:id="@+id/btn_registro"
-            android:layout_gravity="center_horizontal" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="¿No tienes cuenta?"
+                android:id="@+id/lbl_noAcc"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="50dp" />
 
-    </LinearLayout>
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/registro"
+                android:id="@+id/btn_registro"
+                android:layout_gravity="center_horizontal" />
+
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>

@@ -38,6 +38,10 @@
             android:name=".Fragment3"
             android:label="@string/title_activity_fragment3" >
         </activity>
+        <activity
+            android:name=".Registrar_Usuario"
+            android:label="@string/title_activity_registrar__usuario" >
+        </activity>
     </application>
 
 </manifest>
