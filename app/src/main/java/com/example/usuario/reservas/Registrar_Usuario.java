@@ -76,9 +76,8 @@ public class Registrar_Usuario extends ActionBarActivity {
                     Toast.makeText(this, recursos.getString(R.string.error2),Toast.LENGTH_SHORT).show();
                 }
             }else{
-                Drawable d = recursos.getDrawable(R.drawable.ic_error_red_18dp);
-                pw.setError(recursos.getString(R.string.error1),d);
-                Rpw.setError(recursos.getString(R.string.error1),d);
+                pw.setError(recursos.getString(R.string.error1));
+                Rpw.setError(recursos.getString(R.string.error1));
                 pw.requestFocus();
             }
         }

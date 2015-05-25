@@ -174,8 +174,10 @@ public class Login extends ActionBarActivity {
                 Intent in = new Intent(Login.this,Principal.class);
                 finish();
                 startActivity(in);
-
-
+            }else{
+                dialog.cancel();
+                dialog = null;
+                Toast.makeText(Login.this, "Datos Invalidos",Toast.LENGTH_SHORT).show();
             }
             /*AlertDialog.Builder builder1 = new AlertDialog.Builder(Login.this);
             builder1.setCancelable(true);

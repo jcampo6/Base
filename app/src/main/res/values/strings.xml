@@ -19,7 +19,7 @@
     <string name="drawer_close">Close navigation drawer</string>
 
     <string name="action_example">Example action</string>
-    <string name="title_activity_fragment1">Fragment1</string>
+    <string name="title_activity_fragment1">Escenarios</string>
     <string name="title_activity_fragment2">Fragment2</string>
     <string name="title_activity_fragment3">Fragment3</string>
     <string name="title_activity_registrar__usuario">Registrar Usuario</string>
@@ -33,6 +33,10 @@
     <string name="email">Email</string>
     <string name="si">Si</string>
     <string name="no">No</string>
+
+    <string name="ubicacion">Ubicacion</string>
+    <string name="imagen">Imagen</string>
+    <string name="guardar">Guardar</string>
 
     <string name="error0">Faltan Datos Por Llenar</string>
     <string name="error1">Las Contraseñas no Coinciden</string>

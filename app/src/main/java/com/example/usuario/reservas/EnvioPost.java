@@ -58,4 +58,39 @@ public class EnvioPost {
         }
 
     }
+
+    public String postEscenarios(String sql, String url, String nom, String ubi, String img, String idUsu){
+        try{
+            HttpClient httpclient = new DefaultHttpClient();
+
+            HttpPost httppost = new HttpPost(url);
+            List<NameValuePair> params = new ArrayList<NameValuePair>();
+            switch (sql){
+                case "0":
+                    params.add(new BasicNameValuePair("sql",sql));
+                    params.add(new BasicNameValuePair("nombre",nom));
+                    params.add(new BasicNameValuePair("ubicacion",ubi));
+                    params.add(new BasicNameValuePair("imagen",img));
+                    break;
+                case "1":
+                    params.add(new BasicNameValuePair("sql",sql));
+                    params.add(new BasicNameValuePair("id_usuarios",idUsu));
+                    break;
+                default:
+            }
+
+
+            httppost.setEntity(new UrlEncodedFormEntity(params));
+
+            HttpResponse resp = httpclient.execute(httppost);
+            HttpEntity ent = resp.getEntity();
+
+            String respuesta = EntityUtils.toString(ent);
+            return respuesta;
+
+        }catch(Exception e){
+            return "error: "+e.getMessage();
+        }
+
+    }
 }

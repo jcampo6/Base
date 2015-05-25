@@ -44,7 +44,7 @@ public class Principal extends ActionBarActivity {
             setSupportActionBar(toolbar);
         }
 
-        opcionesMenu = new String[] {"Opción 1", "Opción 2", "Opción 3"};
+        opcionesMenu = new String[] {"Escenarios", "Reportes"};
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawerList = (ListView) findViewById(R.id.left_drawer);
 
@@ -64,9 +64,9 @@ public class Principal extends ActionBarActivity {
                     case 1:
                         fragment = new Fragment2();
                         break;
-                    case 2:
+                   /* case 2:
                         fragment = new Fragment3();
-                        break;
+                        break;*/
                 }
 
                 FragmentManager fragmentmanager =
