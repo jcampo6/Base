@@ -1,5 +1,7 @@
 package com.example.usuario.reservas;
 
+import android.app.ProgressDialog;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.support.v4.app.ActivityCompat;
@@ -31,6 +33,7 @@ public class Principal extends ActionBarActivity {
     private Toolbar toolbar;
     private Resources recursos;
     private int pos;
+    private ProgressDialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,9 +52,8 @@ public class Principal extends ActionBarActivity {
         drawerList = (ListView) findViewById(R.id.left_drawer);
 
         drawerList.setAdapter(new ArrayAdapter<String>(
-                getSupportActionBar().getThemedContext(),
+                this,
                 android.R.layout.simple_list_item_1, opcionesMenu));
-
         drawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

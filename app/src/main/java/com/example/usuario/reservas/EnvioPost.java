@@ -18,14 +18,13 @@ import java.util.List;
  */
 public class EnvioPost {
 
-    public String postUsuarios(String sql, String url, String ced, String nom, String ape, String ema, String pw, String tel, String na){
+    public String postUsuarios(String met, String sql, String url, String ced, String nom, String ape, String ema, String pw, String tel, String na){
 
         try{
             HttpClient httpclient = new DefaultHttpClient();
-
             HttpPost httppost = new HttpPost(url);
             List<NameValuePair> params = new ArrayList<NameValuePair>();
-            switch (sql){
+            switch (met){
                 case "0":
                     params.add(new BasicNameValuePair("sql",sql));
                     params.add(new BasicNameValuePair("cedula",ced));
@@ -59,18 +58,19 @@ public class EnvioPost {
 
     }
 
-    public String postEscenarios(String sql, String url, String nom, String ubi, String img, String idUsu){
+    public String postEscenarios(String met, String sql, String url, String nom, String ubi, String img, String idUsu){
         try{
             HttpClient httpclient = new DefaultHttpClient();
 
             HttpPost httppost = new HttpPost(url);
             List<NameValuePair> params = new ArrayList<NameValuePair>();
-            switch (sql){
+            switch (met){
                 case "0":
                     params.add(new BasicNameValuePair("sql",sql));
                     params.add(new BasicNameValuePair("nombre",nom));
                     params.add(new BasicNameValuePair("ubicacion",ubi));
                     params.add(new BasicNameValuePair("imagen",img));
+                    params.add(new BasicNameValuePair("id_usuarios",idUsu));
                     break;
                 case "1":
                     params.add(new BasicNameValuePair("sql",sql));

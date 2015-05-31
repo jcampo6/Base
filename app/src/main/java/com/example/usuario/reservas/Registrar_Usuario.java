@@ -62,7 +62,7 @@ public class Registrar_Usuario extends ActionBarActivity {
             if(pw.getText().toString().equals(Rpw.getText().toString())){
                 StrictMode.enableDefaults();
                 EnvioPost env = new EnvioPost();
-                String txt = env.postUsuarios("0","http://108.163.177.85/clase/jcampo6/app.php",ced,nom,ape,usu,pass,tel,na);
+                String txt = env.postUsuarios("0","0","http://108.163.177.85/clase/jcampo6/app.php",ced,nom,ape,usu,pass,tel,na);
                 AlertDialog.Builder builder1 = new AlertDialog.Builder(this);
                 builder1.setCancelable(true);
                 builder1.setMessage(txt);

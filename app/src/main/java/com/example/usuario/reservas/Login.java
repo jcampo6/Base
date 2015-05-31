@@ -2,7 +2,9 @@ package com.example.usuario.reservas;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.os.AsyncTask;
 import android.os.StrictMode;
@@ -112,6 +114,18 @@ public class Login extends ActionBarActivity {
         }
     }
 
+    public void guardarConfiguracion(boolean estado, String id_usu)
+    {
+        SharedPreferences prefs =
+                getSharedPreferences("Config", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putBoolean("estado", estado);
+        editor.putString("usu", usuario.getText().toString());
+        editor.putString("pass", pw.getText().toString());
+        editor.putString("id", id_usu);
+        editor.commit();
+    }
+
     private class TareaAsincrona extends AsyncTask<String, Float, String> {
 
         protected void onPreExecute() {
@@ -129,20 +143,20 @@ public class Login extends ActionBarActivity {
             /**
              * Simularemos que descargamos un fichero
              * mediante un sleep
-             */
+
             for (int i = 0; i < 100; i++) {
                 //Simulamos cierto retraso
                 try {Thread.sleep(20); }
                 catch (InterruptedException e) {}
                 publishProgress(i/100f); //Actualizamos los valores
-            }
+            }*/
             String ced = "", usu = "", nom = "", ape = "", pass = "", tel = "", na = "";
             usu = params[0];
             pass = params[1];
             StrictMode.enableDefaults();
             EnvioPost env = new EnvioPost();
             //String sql = "INSERT INTO Usuarios (cedula,nombre,apellido,email,password,telefono,nivel_admin) VALUES ('1045721276','JORGE','CAMPO',ing_jcampo@hotmail.com,'1234567','3660043','1')";
-            String txt = env.postUsuarios("1","http://108.163.177.85/clase/jcampo6/app.php",ced,nom,ape,usu,pass,tel,na);
+            String txt = env.postUsuarios("1","1","http://108.163.177.85/clase/jcampo6/app.php",ced,nom,ape,usu,pass,tel,na);
         /*pw.setText(txt);*/
         return txt;
         }
@@ -154,7 +168,6 @@ public class Login extends ActionBarActivity {
 
         protected void onPostExecute(String result){
             if(!result.equalsIgnoreCase("")){
-                Bundle b = new Bundle();
                 ArrayList<Usuario> lista = new ArrayList<>();
                 org.json.JSONObject ja = null;
                 try {
@@ -165,7 +178,7 @@ public class Login extends ActionBarActivity {
                             ja.getString("apellido"),ja.getString("email"),ja.getString("password"),ja.getString("telefono"),
                             ja.getString("nivel_admin"));
                     lista.add(u);
-                    b.putString("id_usuario",ja.getString("id_usuarios"));
+                    guardarConfiguracion(true,ja.getString("id_usuarios"));
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -174,6 +187,7 @@ public class Login extends ActionBarActivity {
                 Intent in = new Intent(Login.this,Principal.class);
                 finish();
                 startActivity(in);
+
             }else{
                 dialog.cancel();
                 dialog = null;
