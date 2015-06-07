@@ -40,6 +40,7 @@ public class Registrar_Usuario extends ActionBarActivity {
         telefono = (EditText) findViewById(R.id.txt_telefono);
         admin = (RadioButton) findViewById(R.id.rad_si);
         recursos = this.getResources();
+        
     }
 
     public void guardar(View v){
@@ -50,6 +51,7 @@ public class Registrar_Usuario extends ActionBarActivity {
         usu = email.getText().toString();
         pass = pw.getText().toString();
         tel = telefono.getText().toString();
+        Drawable dr = recursos.getDrawable(R.drawable.ic_error_red_18dp);
         if(admin.isChecked()){
             na = "1";
         }else{
@@ -76,9 +78,24 @@ public class Registrar_Usuario extends ActionBarActivity {
                     Toast.makeText(this, recursos.getString(R.string.error2),Toast.LENGTH_SHORT).show();
                 }
             }else{
-                pw.setError(recursos.getString(R.string.error1));
-                Rpw.setError(recursos.getString(R.string.error1));
-                pw.requestFocus();
+                if(!usu.contains("@")){
+                    dr.setBounds(0, 0, dr.getIntrinsicWidth(), dr.getIntrinsicHeight());
+                    email.setCompoundDrawables(null, null, dr, null);
+                    email.requestFocus();
+                }else{
+                    dr.setBounds(0, 0, dr.getIntrinsicWidth(), dr.getIntrinsicHeight());
+                    pw.setCompoundDrawables(null, null, dr, null);
+                    Rpw.setCompoundDrawables(null,null,dr,null);
+
+                    pw.setError(recursos.getString(R.string.error1));
+                    Rpw.setError(recursos.getString(R.string.error1));
+
+                    pw.setCompoundDrawables(null, null, dr, null);
+                    Rpw.setCompoundDrawables(null,null,dr,null);
+
+                    pw.requestFocus();
+                }
+
             }
         }
     }
