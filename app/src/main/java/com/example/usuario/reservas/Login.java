@@ -140,16 +140,7 @@ public class Login extends ActionBarActivity {
         }
 
         protected String doInBackground(String... params) {
-            /**
-             * Simularemos que descargamos un fichero
-             * mediante un sleep
 
-            for (int i = 0; i < 100; i++) {
-                //Simulamos cierto retraso
-                try {Thread.sleep(20); }
-                catch (InterruptedException e) {}
-                publishProgress(i/100f); //Actualizamos los valores
-            }*/
             String ced = "", usu = "", nom = "", ape = "", pass = "", tel = "", na = "";
             usu = params[0];
             pass = params[1];
